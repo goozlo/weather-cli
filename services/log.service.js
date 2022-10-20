@@ -2,16 +2,16 @@ import chalk from 'chalk'
 import dedent from "dedent-js";
 
 export const printError = (error) => {
-    console.log(chalk.bgRed(' Error ') + ' ' + error)
+    console.log(chalk.bold(chalk.bgRed(' Error ')) + ' ' + error)
 }
 
 export const printSuccess = (message) => {
-    console.log(chalk.bgGreen(' Success ') + ' ' + message)
+    console.log(chalk.bold(chalk.bgGreen(' Success ')) + ' ' + message)
 }
 
 export const printHelp = () => {
     console.log(
-        dedent`${chalk.bgCyan(' Help ')}
+        dedent`${chalk.bold(chalk.bgCyan(' Help '))}
         No arguments - weather forecast output
         -s [CITY] for setting a city
         -h for helping
